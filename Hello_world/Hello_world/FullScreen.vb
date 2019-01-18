@@ -32,14 +32,16 @@
             Else
                 fraction = 1 / ((bmp01.Height) / 480)
             End If
-            bmpTemp = New Bitmap(bmp01, 640, 480)
+            bmpTemp = New Bitmap(bmp01, bmp01.Width * fraction, bmp01.Height * fraction)
             bmpTemp.SetResolution(bmp01.HorizontalResolution, bmp01.VerticalResolution)
             bmp01 = bmpTemp
             PictureBox1.Image = bmp01
-            Me.Show()
+            Me.ShowDialog()
+            bmp01.Dispose()
         Else
             PictureBox1.Image = bmp01
-            Me.Show()
+            Me.ShowDialog()
+            bmp01.Dispose()
         End If
 
 

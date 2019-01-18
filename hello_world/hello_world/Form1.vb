@@ -34,8 +34,29 @@ Public Class Form1
                 Dim i As Integer
 
                 Dim YLocation As Integer
-                XLocation = 20
-                YLocation = 185
+                XLocation = 70
+                YLocation = 10
+                
+                'For Each cont In Controls
+                '    If TypeOf cont Is Panel Then
+                '        'cont.Image = Nothing
+                '        Me.Controls.Remove(cont)
+                '        cont.Dispose()
+                '        MessageBox.Show("Panel exists")
+                '        Dim Panel1 As New Panel
+                '        Panel1.Width = Me.Width
+                '        Panel1.Height = Me.Height
+                '        Panel1.AutoSize = True
+                '        Me.Controls.Add(Panel1)
+                '        Console.WriteLine(cont.Name)
+                '    End If
+                'Next
+                'If Me.Controls.Contains(Panel1) Then
+                '    Me.Controls.Remove(Panel1)
+
+                'End If
+
+
 
                 For Each image_string As String In imageFiles
 
@@ -43,7 +64,7 @@ Public Class Form1
                     image_string1 = image_string
                     DrawPictureBox(image_string, XLocation, YLocation, i)
                 Next
-            End If
+                    End If
         End If
 
     End Sub
@@ -67,8 +88,8 @@ Public Class Form1
         textBox.Location = New Point(x, y + 155)
         x += 170
         resize_image(bmp01)
-        If x + 150 >= Me.Width Then
-            x = 30
+        If x + 150 >= Panel1.Width Then
+            x = 70
             y = y + 195
         End If
 
@@ -79,8 +100,8 @@ Public Class Form1
         textBox.BackColor = Me.BackColor
         textBox.BorderStyle = BorderStyle.None
         textBox.ReadOnly = True
-        textBox.Anchor = AnchorStyles.Left And AnchorStyles.Right
-        Me.Controls.Add(textBox)
+        'textBox.Anchor = AnchorStyles.Left And AnchorStyles.Right
+        Me.Panel1.Controls.Add(textBox)
 
 
         picBox.Name = "PictureBox" & i
@@ -89,13 +110,14 @@ Public Class Form1
         picBox.TabIndex = 0
         picBox.TabStop = False
         picBox.BorderStyle = BorderStyle.Fixed3D
-        picBox.Anchor = AnchorStyles.Left And AnchorStyles.Right
+        'picBox.Anchor = AnchorStyles.Left And AnchorStyles.Right
         picBox.Tag = string_name
         picBox.ImageLocation = string_name
-        Me.Panel1.Controls.Add(picBox)
+
         ' Me.Controls.Add(picBox)
         picBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         AddHandler picBox.MouseDoubleClick, AddressOf picBox_DoubleClick
+        Me.Panel1.Controls.Add(picBox)
         bmp01.Dispose()
 
     End Sub
@@ -132,7 +154,9 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        
+        Panel1.Width = Me.Width
+        Panel1.Height = Me.Height
+        Panel1.AutoSize = True
     End Sub
 
 

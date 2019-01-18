@@ -47,7 +47,7 @@ Partial Class Form1
         Me.TextBox1.Location = New System.Drawing.Point(404, 12)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(474, 35)
+        Me.TextBox1.Size = New System.Drawing.Size(657, 35)
         Me.TextBox1.TabIndex = 4
         Me.TextBox1.Text = "Gallery"
         Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -61,7 +61,7 @@ Partial Class Form1
         Me.Button2.MaximumSize = New System.Drawing.Size(233, 75)
         Me.Button2.MinimumSize = New System.Drawing.Size(30, 10)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(229, 75)
+        Me.Button2.Size = New System.Drawing.Size(233, 75)
         Me.Button2.TabIndex = 5
         Me.Button2.Text = "List View"
         Me.Button2.UseVisualStyleBackColor = True
@@ -70,7 +70,7 @@ Partial Class Form1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(885, 28)
+        Me.Button1.Location = New System.Drawing.Point(1068, 28)
         Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.MaximumSize = New System.Drawing.Size(255, 75)
         Me.Button1.MinimumSize = New System.Drawing.Size(30, 10)
@@ -82,11 +82,12 @@ Partial Class Form1
         '
         'Panel1
         '
-        Me.Panel1.AutoScroll = True
+        Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel1.AutoSize = True
         Me.Panel1.Location = New System.Drawing.Point(-4, 109)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1391, 573)
+        Me.Panel1.Size = New System.Drawing.Size(1574, 573)
         Me.Panel1.TabIndex = 7
         '
         'Form1
@@ -96,13 +97,14 @@ Partial Class Form1
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(1399, 735)
+        Me.ClientSize = New System.Drawing.Size(1582, 753)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBox1)
         Me.Margin = New System.Windows.Forms.Padding(4)
-        Me.MinimumSize = New System.Drawing.Size(1400, 770)
+        Me.MaximumSize = New System.Drawing.Size(1600, 800)
+        Me.MinimumSize = New System.Drawing.Size(1400, 700)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
