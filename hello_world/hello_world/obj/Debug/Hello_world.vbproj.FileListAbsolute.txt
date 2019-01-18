@@ -1,0 +1,12 @@
+C:\Users\ARPIT\Desktop\VB_lab\Hello_world\Hello_world\bin\Debug\Hello_world.exe.config
+C:\Users\ARPIT\Desktop\VB_lab\Hello_world\Hello_world\bin\Debug\Hello_world.exe
+C:\Users\ARPIT\Desktop\VB_lab\Hello_world\Hello_world\bin\Debug\Hello_world.pdb
+C:\Users\ARPIT\Desktop\VB_lab\Hello_world\Hello_world\bin\Debug\Hello_world.xml
+C:\Users\ARPIT\Desktop\VB_lab\Hello_world\Hello_world\obj\Debug\Hello_world.vbprojAssemblyReference.cache
+C:\Users\ARPIT\Desktop\VB_lab\Hello_world\Hello_world\obj\Debug\Hello_world.Form1.resources
+C:\Users\ARPIT\Desktop\VB_lab\Hello_world\Hello_world\obj\Debug\Hello_world.Resources.resources
+C:\Users\ARPIT\Desktop\VB_lab\Hello_world\Hello_world\obj\Debug\Hello_world.vbproj.GenerateResource.cache
+C:\Users\ARPIT\Desktop\VB_lab\Hello_world\Hello_world\obj\Debug\Hello_world.vbproj.CoreCompileInputs.cache
+C:\Users\ARPIT\Desktop\VB_lab\Hello_world\Hello_world\obj\Debug\Hello_world.exe
+C:\Users\ARPIT\Desktop\VB_lab\Hello_world\Hello_world\obj\Debug\Hello_world.xml
+C:\Users\ARPIT\Desktop\VB_lab\Hello_world\Hello_world\obj\Debug\Hello_world.pdb
