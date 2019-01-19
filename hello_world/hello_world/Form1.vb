@@ -6,27 +6,17 @@ Public Class Form1
     Dim picBox As New PictureBox
     Dim textBox As New TextBox
 
-    Private Sub resize_image(ByRef bmp01 As Bitmap)
-
-
-        If bmp01.Width > 150 Or bmp01.Height > 150 Then
-            bmpTemp = New Bitmap(bmp01, 150, 150)
-            bmpTemp.SetResolution(bmp01.HorizontalResolution, bmp01.VerticalResolution)
-            bmp01 = bmpTemp
-        End If
-
-
-
-    End Sub
+   
     Private Sub button1_click(sender As Object, e As EventArgs) Handles Button1.Click
+        
         If imageFolderBrowserDlg.ShowDialog() = DialogResult.OK Then
-            Me.imageFiles = GetFiles(Me.imageFolderBrowserDlg.SelectedPath, "*.jpg;*.jpeg;*.png;*.bmp;*.tif;*.tiff;*.gif;*.JPG")
+            Me.imageFiles = GetFiles(Me.imageFolderBrowserDlg.SelectedPath, "*.jpg;*.jpeg;*.png;*.bmp;*.tif;*.tiff;*.gif;*.JPG;*JPEG 2000;*.GIF;*.BMP;*.BPG;*.BAT;*.HEIF;*.WebP;*.Exif;*.TIFF")
             If Me.imageFiles.Length = 0 Then
                 MessageBox.Show("No image can be found")
             Else
 
-
-
+                ' If new folder is selected then remove all the previous images and add new ones
+                Panel1.Controls.Clear()
                 ' Dim bm2 = New Bitmap(10, 10)
                 Dim image_string1 As String
 
@@ -35,28 +25,7 @@ Public Class Form1
 
                 Dim YLocation As Integer
                 XLocation = 70
-                YLocation = 10
-                
-                'For Each cont In Controls
-                '    If TypeOf cont Is Panel Then
-                '        'cont.Image = Nothing
-                '        Me.Controls.Remove(cont)
-                '        cont.Dispose()
-                '        MessageBox.Show("Panel exists")
-                '        Dim Panel1 As New Panel
-                '        Panel1.Width = Me.Width
-                '        Panel1.Height = Me.Height
-                '        Panel1.AutoSize = True
-                '        Me.Controls.Add(Panel1)
-                '        Console.WriteLine(cont.Name)
-                '    End If
-                'Next
-                'If Me.Controls.Contains(Panel1) Then
-                '    Me.Controls.Remove(Panel1)
-
-                'End If
-
-
+               
 
                 For Each image_string As String In imageFiles
 
@@ -64,7 +33,7 @@ Public Class Form1
                     image_string1 = image_string
                     DrawPictureBox(image_string, XLocation, YLocation, i)
                 Next
-                    End If
+            End If
         End If
 
     End Sub
@@ -79,15 +48,12 @@ Public Class Form1
             bmp01 = Image.FromFile(string_name) ' add system.memorylimitexceeded exception
         Catch e As System.OutOfMemoryException
             Console.WriteLine("system out of memory")
-            'Throw New System.OutOfMemoryException()
-            'MessageBox.Show("you have selected too many images")
-            'Me.Close()
-            'Me.Show()
+          
         End Try
         Dim textBox As New TextBox
         textBox.Location = New Point(x, y + 155)
-        x += 170
-        resize_image(bmp01)
+        x += 150
+        'resize_image(bmp01)
         If x + 150 >= Panel1.Width Then
             x = 70
             y = y + 195
@@ -97,10 +63,11 @@ Public Class Form1
         textBox.Name = "TextBox" & i
         textBox.Size = New Size(150, 20)
         textBox.Text = picture_name
-        textBox.BackColor = Me.BackColor
+        textBox.BackColor = Color.Black
         textBox.BorderStyle = BorderStyle.None
         textBox.ReadOnly = True
-        'textBox.Anchor = AnchorStyles.Left And AnchorStyles.Right
+        textBox.ForeColor = Color.FloralWhite
+        
         Me.Panel1.Controls.Add(textBox)
 
 
@@ -109,14 +76,15 @@ Public Class Form1
         picBox.Size = New Size(150, 150)
         picBox.TabIndex = 0
         picBox.TabStop = False
-        picBox.BorderStyle = BorderStyle.Fixed3D
-        'picBox.Anchor = AnchorStyles.Left And AnchorStyles.Right
+        'picBox.Margin = New Padding(1, 1, 1, 1)
+        picBox.BorderStyle = BorderStyle.None
+        picBox.BackColor = Color.Black
+
         picBox.Tag = string_name
         picBox.ImageLocation = string_name
-
-        ' Me.Controls.Add(picBox)
         picBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         AddHandler picBox.MouseDoubleClick, AddressOf picBox_DoubleClick
+        'AddHandler picBox.MouseHover, AddressOf picBox_MouseHover
         Me.Panel1.Controls.Add(picBox)
         bmp01.Dispose()
 
@@ -127,13 +95,9 @@ Public Class Form1
 
         Dim files As New List(Of String)()
         For Each filter As String In patterns
-            
-
-
             If Not IO.Directory.Exists(path) Then
                 Throw New ArgumentException()
-            End If
-            
+            End If          
             Try
                 files.AddRange(IO.Directory.GetFiles(path, filter))
             Catch e3 As UnauthorizedAccessException
@@ -153,16 +117,8 @@ Public Class Form1
         Form2Caller.SetPictureBoxImage(sender.Tag)
     End Sub
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Panel1.Width = Me.Width
-        Panel1.Height = Me.Height
-        Panel1.AutoSize = True
-    End Sub
-
-
-    Private Sub VScrollBar1_Scroll(sender As Object, e As ScrollEventArgs)
-        AutoScroll = True
-    End Sub
+    
+   
 End Class
 
 

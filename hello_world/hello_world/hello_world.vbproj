@@ -129,5 +129,11 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-grid-view-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-list-view-32.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
