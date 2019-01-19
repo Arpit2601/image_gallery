@@ -161,18 +161,19 @@ Public Class Form1
         textBox.BorderStyle = BorderStyle.None
         textBox.ReadOnly = True
         textBox.ForeColor = Color.FloralWhite
+        textBox.Cursor = Cursors.Hand
         'textBox.BorderStyle = BorderStyle.Fixed3D
 
         textBox.Tag = string_name
         'textBox.Anchor = AnchorStyles.Left And AnchorStyles.Right
         Me.Panel1.Controls.Add(textBox)
 
-        AddHandler textBox.DoubleClick, AddressOf textBox_DoubleClick
+        AddHandler textBox.Click, AddressOf textBox_Click
 
 
     End Sub
 
-    Private Sub textBox_DoubleClick(ByVal sender As Object, ByVal e As EventArgs)
+    Private Sub textBox_Click(ByVal sender As Object, ByVal e As EventArgs)
         Dim Form2Caller As New FullScreen
         Form2Caller.SetPictureBoxImage(sender.Tag)
     End Sub

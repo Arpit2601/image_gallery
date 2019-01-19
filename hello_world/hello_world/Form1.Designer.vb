@@ -66,7 +66,6 @@ Partial Class Form1
         '
         'Button2
         '
-        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button2.BackColor = System.Drawing.Color.White
         Me.Button2.FlatAppearance.BorderSize = 0
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
@@ -85,7 +84,6 @@ Partial Class Form1
         '
         'Button1
         '
-        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button1.BackColor = System.Drawing.Color.White
         Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.Red
@@ -116,9 +114,10 @@ Partial Class Form1
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBox1)
+        Me.Cursor = System.Windows.Forms.Cursors.Default
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximumSize = New System.Drawing.Size(1600, 800)
-        Me.MinimumSize = New System.Drawing.Size(1400, 700)
+        Me.MinimumSize = New System.Drawing.Size(1600, 800)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
