@@ -83,7 +83,8 @@ Public Class Form1
         picBox.Tag = string_name
         picBox.ImageLocation = string_name
         picBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        AddHandler picBox.MouseDoubleClick, AddressOf picBox_DoubleClick
+        AddHandler picBox.Click, AddressOf picBox_Click
+        picBox.Cursor = Cursors.Hand
         'AddHandler picBox.MouseHover, AddressOf picBox_MouseHover
         Me.Panel1.Controls.Add(picBox)
         bmp01.Dispose()
@@ -112,7 +113,7 @@ Public Class Form1
         Return files.ToArray()
     End Function
 
-    Private Sub picBox_DoubleClick(ByVal sender As Object, ByVal e As EventArgs)
+    Private Sub picBox_Click(ByVal sender As Object, ByVal e As EventArgs)
         Dim Form2Caller As New FullScreen
         Form2Caller.SetPictureBoxImage(sender.Tag)
     End Sub
