@@ -118,13 +118,14 @@ Public Class Form1
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+
         If imageFolderBrowserDlg.ShowDialog() = DialogResult.OK Then
             Me.imageFiles = GetFiles(Me.imageFolderBrowserDlg.SelectedPath, "*.jpg;*.jpeg;*.png;*.bmp;*.tif;*.tiff;*.gif")
             If Me.imageFiles.Length = 0 Then
                 MessageBox.Show("No image can be found")
             Else
                 'Dim image_string1 As String
-
+                Panel1.Controls.Clear()
                 Dim XLocation As Integer
                 Dim YLocation As Integer
                 Dim i As Integer
@@ -142,8 +143,8 @@ Public Class Form1
     Public Sub DrawTextBox(ByVal string_name As String, ByRef x As Integer, ByRef y As Integer, ByRef i As Integer)
 
         Dim textBox As New TextBox
-        textBox.Location = New Point(x, y + 150)
-        x += 400
+        textBox.Location = New Point(x, y + 20)
+        x += 200
 
         If x + 150 >= Me.Width Then
             x = 30
@@ -156,11 +157,11 @@ Public Class Form1
         textBox.Name = "TextBox" & i
         textBox.Size = New Size(150, 20)
         textBox.Text = picture_name
-        textBox.BackColor = Me.BackColor
+        textBox.BackColor = Color.Black
         textBox.BorderStyle = BorderStyle.None
         textBox.ReadOnly = True
-        textBox.ForeColor = Color.Black
-        textBox.BorderStyle = BorderStyle.Fixed3D
+        textBox.ForeColor = Color.FloralWhite
+        'textBox.BorderStyle = BorderStyle.Fixed3D
 
         textBox.Tag = string_name
         'textBox.Anchor = AnchorStyles.Left And AnchorStyles.Right
