@@ -117,7 +117,64 @@ Public Class Form1
         Form2Caller.SetPictureBoxImage(sender.Tag)
     End Sub
 
-    
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        If imageFolderBrowserDlg.ShowDialog() = DialogResult.OK Then
+            Me.imageFiles = GetFiles(Me.imageFolderBrowserDlg.SelectedPath, "*.jpg;*.jpeg;*.png;*.bmp;*.tif;*.tiff;*.gif")
+            If Me.imageFiles.Length = 0 Then
+                MessageBox.Show("No image can be found")
+            Else
+                'Dim image_string1 As String
+
+                Dim XLocation As Integer
+                Dim YLocation As Integer
+                Dim i As Integer
+
+                XLocation = 30
+                YLocation = 0
+
+                For Each image_string As String In imageFiles
+                    DrawTextBox(image_string, XLocation, YLocation, i)
+                Next
+            End If
+        End If
+    End Sub
+
+    Public Sub DrawTextBox(ByVal string_name As String, ByRef x As Integer, ByRef y As Integer, ByRef i As Integer)
+
+        Dim textBox As New TextBox
+        textBox.Location = New Point(x, y + 150)
+        x += 400
+
+        If x + 150 >= Me.Width Then
+            x = 30
+            y = y + 30
+        End If
+
+        'textBox.Text = string_name
+
+        Dim picture_name As String = System.IO.Path.GetFileName(string_name)
+        textBox.Name = "TextBox" & i
+        textBox.Size = New Size(150, 20)
+        textBox.Text = picture_name
+        textBox.BackColor = Me.BackColor
+        textBox.BorderStyle = BorderStyle.None
+        textBox.ReadOnly = True
+        textBox.ForeColor = Color.Black
+        textBox.BorderStyle = BorderStyle.Fixed3D
+
+        textBox.Tag = string_name
+        'textBox.Anchor = AnchorStyles.Left And AnchorStyles.Right
+        Me.Panel1.Controls.Add(textBox)
+
+        AddHandler textBox.DoubleClick, AddressOf textBox_DoubleClick
+
+
+    End Sub
+
+    Private Sub textBox_DoubleClick(ByVal sender As Object, ByVal e As EventArgs)
+        Dim Form2Caller As New FullScreen
+        Form2Caller.SetPictureBoxImage(sender.Tag)
+    End Sub
    
 End Class
 
