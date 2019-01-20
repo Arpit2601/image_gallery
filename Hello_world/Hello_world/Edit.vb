@@ -13,8 +13,7 @@
     Public Sub SetPictureBoxImage(ByVal image_path As String)
         Dim fraction As Double          ' fraction is the rescaling factor
         Dim bmpTemp As Bitmap           ' temporary bitmap to store rescaled image
-        'Dim bmp1 As Bitmap             ' bitmap where the image is initially stored
-        'Dim bmp02 As Bitmap
+        
         image_path1 = image_path
         Try
             bmp1 = Image.FromFile(image_path)      ' loading the image in bitmap
@@ -30,8 +29,7 @@
                 bmpTemp.SetResolution(bmp1.HorizontalResolution, bmp1.VerticalResolution)
                 bmp1 = bmpTemp
                 PictureBox1.Image = bmp1
-                'bmp02 = PictureBox1.Image
-                'bmpTemp = PictureBox1.Image
+                
                 RestoreBitmap = PictureBox1.Image
                 Me.ShowDialog()     'Show the edit window after loading the image
                 bmp1.Dispose()
@@ -56,6 +54,10 @@
     
 
     'add rotate 90 option also
+
+
+    ' the mirror image option it changes the flip the image about vertical axis
+
    
     Private Sub Button13_Click(sender As Object, e As EventArgs) Handles cmdMirror.Click
         If PictureBox1.Image Is Nothing Then
@@ -77,7 +79,8 @@
 
     
 
-    
+    ' this button restores the image as it was
+
 
     Private Sub cmdRestore_Click(sender As Object, e As EventArgs) Handles cmdRestore.Click
         Dim fraction As Double          ' fraction is the rescaling factor
@@ -96,10 +99,10 @@
                 bmpTemp.SetResolution(bmp1.HorizontalResolution, bmp1.VerticalResolution)
                 bmp1 = bmpTemp
                 PictureBox1.Image = bmp1
-               
+
             Else
                 PictureBox1.Image = bmp1
-               
+
             End If
 
             'If the system ran out of memory then message will pop up that "the image can't be loaded"
@@ -109,6 +112,7 @@
     End Sub
 
 
+    ' this button increases red color quantity of the image
 
     Private Sub cmdRed_Click(sender As Object, e As EventArgs) Handles cmdRed.Click
         If PictureBox1.Image Is Nothing Then
@@ -128,6 +132,9 @@
         'trkBrightness.Value = 10
     End Sub
 
+
+    ' this button increases green color quantity of the image
+
     Private Sub cmdGreen_Click(sender As Object, e As EventArgs) Handles cmdGreen.Click
         If PictureBox1.Image Is Nothing Then
             Exit Sub
@@ -146,6 +153,9 @@
         'trkBrightness.Value = 10
     End Sub
 
+
+    ' this button increases blue color quantity of the image
+
     Private Sub cmdBlue_Click(sender As Object, e As EventArgs) Handles cmdBlue.Click
         If PictureBox1.Image Is Nothing Then
             Exit Sub
@@ -163,6 +173,9 @@
         PictureBox1.Image = bmp02
         'trkBrightness.Value = 10
     End Sub
+
+
+    ' this button increases grey color quantity of the image
 
     Private Sub cmdGrey_Click(sender As Object, e As EventArgs) Handles cmdGrey.Click
         If PictureBox1.Image Is Nothing Then
@@ -186,6 +199,9 @@
         'trkBrightness.Value = 10
     End Sub
 
+
+    ' this button turns image into negative
+
     Private Sub cmdNeg_Click(sender As Object, e As EventArgs) Handles cmdNegative.Click
         If PictureBox1.Image Is Nothing Then
             Exit Sub
@@ -203,6 +219,8 @@
         PictureBox1.Image = bmp02
         'trkBrightness.Value = 10
     End Sub
+
+    ' this button increases sepia color quantity of the image
 
     Private Sub cmdSepia_Click(sender As Object, e As EventArgs) Handles cmdSepia.Click
         If PictureBox1.Image Is Nothing Then
@@ -227,6 +245,9 @@
         PictureBox1.Image = bmp02
         'trkBrightness.Value = 10
     End Sub
+
+
+    ' this button turns image into mono
 
     Private Sub cmdMono_Click(sender As Object, e As EventArgs) Handles cmdMono.Click
         If PictureBox1.Image Is Nothing Then
@@ -293,35 +314,12 @@
             Next
         Next
         PictureBox1.Image = bmp02
-        'trkBrightness.Value = 10
+
     End Sub
 
-
-
-    'Private Sub saveButton_click(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles saveButton.Click
-    '    SaveFileDialog1.Filter = "Bitmap Files|*.bmp|JPEG Files|*.jpeg|GIF Files|*.gif|jpg Files|*.jpg"
-    '    If SaveFileDialog1.ShowDialog = DialogResult.OK Then
-    '        If SaveFileDialog1.FilterIndex = 1 Then
-    '            PictureBox1.Image.Save(SaveFileDialog1.FileName, _
-    '              Drawing.Imaging.ImageFormat.Bmp)
-    '        ElseIf SaveFileDialog1.FilterIndex = 2 Then
-    '            PictureBox1.Image.Save(SaveFileDialog1.FileName, _
-    '              Drawing.Imaging.ImageFormat.Jpeg)
-    '        ElseIf SaveFileDialog1.FilterIndex = 3 Then
-    '            PictureBox1.Image.Save(SaveFileDialog1.FileName, _
-    '              Drawing.Imaging.ImageFormat.Gif)
-    '        ElseIf SaveFileDialog1.FilterIndex = 4 Then
-    '            PictureBox1.Image.Save(SaveFileDialog1.FileName, _
-    '              Drawing.Imaging.ImageFormat.Jpeg)
-    '        End If
-    '    End If
-    'End Sub
 
     Private Sub saveButton_click(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles saveButton.Click
-        PictureBox1.Image.Save(image_path1)
+        PictureBox1.Image.Save(SaveFileDialog1.FileName)
     End Sub
 
-    Private Sub saveButton_click(sender As Object, e As EventArgs) Handles saveButton.Click
-
-    End Sub
 End Class
