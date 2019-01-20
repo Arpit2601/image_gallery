@@ -27,7 +27,7 @@ C:\Users\ARPIT\Desktop\image_gallery\Hello_world\Hello_world\obj\Debug\Hello_wor
 C:\Users\ARPIT\Desktop\image_gallery\Hello_world\Hello_world\bin\Debug\Hello_world.exe
 C:\Users\ARPIT\Desktop\image_gallery\Hello_world\Hello_world\bin\Debug\Hello_world.pdb
 C:\Users\ARPIT\Desktop\image_gallery\Hello_world\Hello_world\bin\Debug\Hello_world.xml
-C:\Users\ARPIT\Desktop\image_gallery\Hello_world\Hello_world\obj\Debug\Hello_world.Form1.resources
-C:\Users\ARPIT\Desktop\image_gallery\Hello_world\Hello_world\obj\Debug\Hello_world.FullScreen.resources
 C:\Users\ARPIT\Desktop\image_gallery\Hello_world\Hello_world\obj\Debug\Hello_world.Resources.resources
 C:\Users\ARPIT\Desktop\image_gallery\Hello_world\Hello_world\obj\Debug\Hello_world.vbproj.GenerateResource.Cache
+C:\Users\ARPIT\Desktop\image_gallery\Hello_world\Hello_world\obj\Debug\Hello_world.Gallery.resources
+C:\Users\ARPIT\Desktop\image_gallery\Hello_world\Hello_world\obj\Debug\Hello_world.Edit.resources
