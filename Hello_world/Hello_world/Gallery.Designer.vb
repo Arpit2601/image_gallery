@@ -53,7 +53,6 @@ Partial Class Gallery
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel1.AutoSize = True
         Me.Panel1.BackColor = System.Drawing.Color.Black
-        Me.Panel1.BackgroundImage = Global.Hello_world.My.Resources.Resources.abstract_art_background_1227511
         Me.Panel1.Location = New System.Drawing.Point(-4, 109)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1574, 573)

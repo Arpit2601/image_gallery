@@ -105,7 +105,7 @@ Public Class Gallery
         textBox.Name = "TextBox" & i
         textBox.Size = New Size(150, 20)
         textBox.Text = picture_name
-        textBox.BackColor = Color.Empty
+        textBox.BackColor = Color.Black
         textBox.BorderStyle = BorderStyle.None
         textBox.ReadOnly = True
         textBox.ForeColor = Color.FloralWhite
@@ -189,6 +189,7 @@ Public Class Gallery
         textBox.Size = New Size(150, 20)
         textBox.Text = picture_name
         textBox.BackColor = Color.Black
+
         textBox.BorderStyle = BorderStyle.None
         textBox.ReadOnly = True
         textBox.ForeColor = Color.FloralWhite
@@ -214,6 +215,7 @@ Public Class Gallery
     ' If its a file then it will display on picture box otherwise a cross sign will come
     Private Sub Gallery_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.AllowDrop = True
+        'Me.SetStyle(ControlStyles.SupportsTransparentBackColor, True)
     End Sub
    
 
@@ -231,6 +233,7 @@ Public Class Gallery
         picBox_drag.SizeMode = PictureBoxSizeMode.StretchImage
         picBox_drag.Tag = path
         picBox_drag.ImageLocation = path
+        picBox_drag.Cursor = Cursors.Hand
         AddHandler picBox_drag.Click, AddressOf picBox_drag_click
     End Sub
 

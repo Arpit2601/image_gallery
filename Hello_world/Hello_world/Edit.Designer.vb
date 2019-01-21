@@ -32,7 +32,6 @@ Partial Class Edit
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.cmdGrey = New System.Windows.Forms.Button()
-        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.cmdMirror = New System.Windows.Forms.Button()
         Me.cmdRotate = New System.Windows.Forms.Button()
         Me.cmdFlip = New System.Windows.Forms.Button()
@@ -252,6 +251,5 @@ Partial Class Edit
     Friend WithEvents cmdRotate As System.Windows.Forms.Button
     Friend WithEvents cmdMirror As System.Windows.Forms.Button
     Friend WithEvents cmdGrey As System.Windows.Forms.Button
-    Friend WithEvents SaveFileDialog1 As System.Windows.Forms.SaveFileDialog
 
 End Class

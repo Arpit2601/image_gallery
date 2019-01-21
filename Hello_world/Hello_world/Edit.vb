@@ -44,8 +44,8 @@
             'If the system ran out of memory then message will pop up that "the image can't be loaded"
         Catch ex As System.OutOfMemoryException
             MessageBox.Show("image cannot be loaded")
-            'Catch ex1 As System.InvalidCastException
-            '    MessageBox.Show("image cannot be saved")
+        Catch ex1 As System.InvalidCastException
+            MessageBox.Show("image cannot be saved")
         End Try
 
     End Sub
