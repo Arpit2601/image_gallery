@@ -209,10 +209,46 @@ Public Class Gallery
         Form2Caller.SetPictureBoxImage(sender.Tag)
     End Sub
 
-    Private Sub Gallery_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    ' Allow the user to drop any file on form at any page .
+    ' If its a file then it will display on picture box otherwise a cross sign will come
+    Private Sub Gallery_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.AllowDrop = True
     End Sub
+   
+
+    ' Handles the event of drag drop 
+    ' It clears any previous images on panel then dynamically creates a picture box and then renders the image on it 
+    ' it also has handller so that when clicked on image it takes us to editinig window
+    Private Sub Gallery_DragDrop(sender As System.Object, e As System.Windows.Forms.DragEventArgs) Handles MyBase.DragDrop
+        Me.Panel1.Controls.Clear()
+        Dim picBox_drag As New PictureBox
+        picBox_drag.Location = New Point(298, 33)
+        picBox_drag.Size = New Size(640, 480)
+        Me.Panel1.Controls.Add(picBox_drag)
+        Dim files() As String = e.Data.GetData(DataFormats.FileDrop)
+        Dim path As String = files(0)
+        picBox_drag.SizeMode = PictureBoxSizeMode.StretchImage
+        picBox_drag.Tag = path
+        picBox_drag.ImageLocation = path
+        AddHandler picBox_drag.Click, AddressOf picBox_drag_click
+    End Sub
+
+
+    ' Handles the even of drag enter
+    Private Sub Gallery_DragEnter(sender As Object, e As DragEventArgs) Handles MyBase.DragEnter
+        If e.Data.GetDataPresent(DataFormats.FileDrop) Then
+            e.Effect = DragDropEffects.Copy
+        End If
+    End Sub
+
+
+    ' when image is clicked it sends to next window
+    Private Sub picBox_drag_Click(ByVal sender As Object, ByVal e As EventArgs)
+        Dim Form2Caller As New Edit
+        Form2Caller.SetPictureBoxImage(sender.Tag)
+    End Sub
+
 End Class
 
 
-'

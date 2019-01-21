@@ -35,9 +35,8 @@
                 bmp1.Dispose()
             Else
                 PictureBox1.Image = bmp1
-                PictureBox1.SizeMode = PictureBoxSizeMode.CenterImage
+                PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
                 RestoreBitmap = PictureBox1.Image
-
                 Me.ShowDialog()
                 bmp1.Dispose()
             End If
@@ -45,8 +44,8 @@
             'If the system ran out of memory then message will pop up that "the image can't be loaded"
         Catch ex As System.OutOfMemoryException
             MessageBox.Show("image cannot be loaded")
-        Catch ex1 As System.InvalidCastException
-            MessageBox.Show("image cannot be saved")
+            'Catch ex1 As System.InvalidCastException
+            '    MessageBox.Show("image cannot be saved")
         End Try
 
     End Sub
@@ -63,6 +62,8 @@
         If PictureBox1.Image Is Nothing Then
             Exit Sub
         End If
+        bmp02 = PictureBox1.Image
+        bmpTemp = PictureBox1.Image
         For x = 0 To (bmp02.Width / 2) - 1
             For y = 0 To bmp02.Height - 1
                 clrTemp = bmp02.GetPixel(x, y)
@@ -318,8 +319,24 @@
     End Sub
 
 
-    Private Sub saveButton_click(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles saveButton.Click
-        PictureBox1.Image.Save(SaveFileDialog1.FileName)
-    End Sub
+    'Private Sub saveButton_click(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles saveButton.Click
+    '    SaveFileDialog1.Filter = "Bitmap Files|*.bmp|JPEG Files|*.jpg|GIF Files|*.gif|PNG Files|*.png"
+    '    MessageBox.Show("Sfd")
+    '    If SaveFileDialog1.ShowDialog = DialogResult.OK Then
+    '        If SaveFileDialog1.FilterIndex = 1 Then
+    '            PictureBox1.Image.Save(SaveFileDialog1.FileName, _
+    '              Drawing.Imaging.ImageFormat.Bmp)
+    '        ElseIf SaveFileDialog1.FilterIndex = 2 Then
+    '            PictureBox1.Image.Save(SaveFileDialog1.FileName, _
+    '              Drawing.Imaging.ImageFormat.Jpeg)
+    '        ElseIf SaveFileDialog1.FilterIndex = 3 Then
+    '            PictureBox1.Image.Save(SaveFileDialog1.FileName, _
+    '              Drawing.Imaging.ImageFormat.Gif)
+    '        ElseIf SaveFileDialog1.FilterIndex = 4 Then
+    '            PictureBox1.Image.Save(SaveFileDialog1.FileName, _
+    '              Drawing.Imaging.ImageFormat.Png)
+    '        End If
+    '    End If
+    'End Sub
 
 End Class

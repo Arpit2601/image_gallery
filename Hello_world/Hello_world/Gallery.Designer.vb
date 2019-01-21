@@ -22,18 +22,12 @@ Partial Class Gallery
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.imageFolderBrowserDlg = New System.Windows.Forms.FolderBrowserDialog()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.ListButton = New System.Windows.Forms.Button()
         Me.GridButton = New System.Windows.Forms.Button()
         Me.SuspendLayout()
-        '
-        'OpenFileDialog1
-        '
-        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
         'TextBox1
         '
@@ -124,8 +118,6 @@ Partial Class Gallery
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents OpenFileDialog1 As OpenFileDialog
-    Friend WithEvents SaveFileDialog1 As SaveFileDialog
     Friend WithEvents imageFolderBrowserDlg As FolderBrowserDialog
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents ListButton As System.Windows.Forms.Button
