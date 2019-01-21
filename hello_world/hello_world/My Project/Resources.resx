@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="background-blur-clean-531880_1574x573" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background-blur-clean-531880_1574x573.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-grid-view-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-grid-view-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,7 +139,7 @@
   <data name="icons8-flip-vertical-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-flip-vertical-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="background-blur-clean-531880_1574x573" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\background-blur-clean-531880_1574x573.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="abstract-art-background-1227511" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\abstract-art-background-1227511.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

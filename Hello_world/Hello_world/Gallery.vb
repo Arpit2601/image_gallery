@@ -105,7 +105,7 @@ Public Class Gallery
         textBox.Name = "TextBox" & i
         textBox.Size = New Size(150, 20)
         textBox.Text = picture_name
-        textBox.BackColor = Color.Black
+        textBox.BackColor = Color.Empty
         textBox.BorderStyle = BorderStyle.None
         textBox.ReadOnly = True
         textBox.ForeColor = Color.FloralWhite

@@ -151,5 +151,8 @@
   <ItemGroup>
     <None Include="Resources\background-blur-clean-531880_1574x573.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abstract-art-background-1227511.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
