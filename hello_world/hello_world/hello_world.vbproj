@@ -148,5 +148,8 @@
   <ItemGroup>
     <None Include="Resources\icons8-save-32.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background-blur-clean-531880_1574x573.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -15,6 +15,10 @@ Hello_world
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
+</member><member name="P:Hello_world.My.Resources.Resources.background_blur_clean_531880_1574x573">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Hello_world.My.Resources.Resources.icons8_flip_horizontal_32">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
