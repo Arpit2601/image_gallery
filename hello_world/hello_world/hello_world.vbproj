@@ -103,6 +103,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="own_gallery.Designer.vb">
+      <DependentUpon>own_gallery.vb</DependentUpon>
+    </Compile>
+    <Compile Include="own_gallery.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Gallery.resx">
@@ -116,6 +122,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="own_gallery.resx">
+      <DependentUpon>own_gallery.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

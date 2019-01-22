@@ -31,3 +31,4 @@ C:\Users\ARPIT\Desktop\image_gallery\Hello_world\Hello_world\obj\Debug\Hello_wor
 C:\Users\ARPIT\Desktop\image_gallery\Hello_world\Hello_world\obj\Debug\Hello_world.Edit.resources
 C:\Users\ajais\Desktop\vb_projects\image_gallery\Hello_world\Hello_world\obj\Debug\Hello_world.Gallery.resources
 C:\Users\ajais\Desktop\vb_projects\image_gallery\Hello_world\Hello_world\obj\Debug\Hello_world.Edit.resources
+C:\Users\ajais\Desktop\vb_projects\image_gallery\Hello_world\Hello_world\obj\Debug\Hello_world.own_gallery.resources

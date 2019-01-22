@@ -252,6 +252,11 @@ Public Class Gallery
         Form2Caller.SetPictureBoxImage(sender.Tag)
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim Form3Caller As New own_gallery
+        Form3Caller.ShowDialog()
+
+    End Sub
 End Class
 
 

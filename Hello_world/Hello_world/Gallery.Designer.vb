@@ -25,6 +25,7 @@ Partial Class Gallery
         Me.imageFolderBrowserDlg = New System.Windows.Forms.FolderBrowserDialog()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.ListButton = New System.Windows.Forms.Button()
         Me.GridButton = New System.Windows.Forms.Button()
         Me.SuspendLayout()
@@ -57,6 +58,16 @@ Partial Class Gallery
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1574, 573)
         Me.Panel1.TabIndex = 7
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(1071, 12)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(342, 54)
+        Me.Button1.TabIndex = 8
+        Me.Button1.Text = "Make your own Gallery"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'ListButton
         '
@@ -104,6 +115,7 @@ Partial Class Gallery
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(1582, 753)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.ListButton)
         Me.Controls.Add(Me.GridButton)
@@ -123,4 +135,5 @@ Partial Class Gallery
     Friend WithEvents ListButton As System.Windows.Forms.Button
     Friend WithEvents GridButton As System.Windows.Forms.Button
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class
