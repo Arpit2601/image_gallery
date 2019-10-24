@@ -14,6 +14,7 @@
         Dim fraction As Double          ' fraction is the rescaling factor
         Dim bmpTemp As Bitmap           ' temporary bitmap to store rescaled image
         
+        ' getting the image path
         image_path1 = image_path
         Try
             bmp1 = Image.FromFile(image_path)      ' loading the image in bitmap
